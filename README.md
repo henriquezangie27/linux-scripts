@@ -16,7 +16,7 @@ Comandos utilizados: uptime, free, df, find, grep, scp, cp, mv
 
 
 📄 Contenido del Script
-📁 
+📁 linux-scripts
 Este script incluye:
 
 🕒 Tiempo de encendido del sistema (uptime)
