@@ -30,6 +30,17 @@ echo "🔍 Ejemplo de búsqueda de archivos .log mayores a 10MB:"
 find /var/log -type f -name "*.log" -size +10M 2>/dev/null
 echo "---------------------------------------"
 
+#Limpieza con find por cantidad de dias
+find /ruta/ruta/ruta/ -type f -name "*.txt" ! -name "*.htm" -mtime +180 -exec rm {} \;
+
+echo "🔍 Valida las llamadas duplicadas en un archivo expecifico:"
+find . -type f -name 'archivoespecifico.txt' -exec sh -c 'grep "parametros" "$1" | grep "000123" | sort | uniq -d' _ {} \;
+echo "---------------------------------------"
+
+echo "🔍 Cuenta las llamadas por la posicion un campo  ejemplp: Posicion 87, de largo 6 :"
+awk '{print substr($0, 87, 6)}' archivosdellamadas.txt | sort | uniq -c | sort -k 1 -r
+echo "----------------------------------------"
+
 # Búsqueda de texto con 'grep'
 echo "📝 Archivos que contienen la palabra 'ERROR':"
 grep -r "ERROR" /var/log 2>/dev/null | head -n 5
@@ -41,6 +52,16 @@ echo "---------------------------------------"
 
 # Transferencia remota con SCP (ejemplo)
 # scp archivo1.txt usuario@servidor:/ruta/destino
+#Otra manera de hacerlo con SFTP
+#sftp xx.xx.xxx.xx
+password
+cd /ruta/ruta/ruta/
+pwd
+mput archivoenviar.txt
+
+#Comprimir y Agrupar
+tar -cvf archivo.tar *
+gzip  archivoagrupado.tar archivoagrupado.tar.gz
 
 # Ejecución de scripts (ejemplo)
 # bash script.sh
