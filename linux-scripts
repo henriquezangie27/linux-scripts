@@ -1,0 +1,48 @@
+#!/bin/bash
+# =======================================
+# 🖥️ Script de Monitoreo y Utilidades en Linux
+# Autor: Angie Henriquez
+# Descripción: Ejemplos de monitoreo y operaciones básicas
+# =======================================
+
+echo "======================================="
+echo " 📊 Monitoreo del Sistema - Angie Henriquez"
+echo "======================================="
+
+# Tiempo encendido
+echo "🕒 Tiempo encendido del sistema:"
+uptime -p
+echo "---------------------------------------"
+
+# Uso de memoria
+echo "💾 Uso de memoria:"
+free -h
+echo "---------------------------------------"
+
+# Uso de disco (incluyendo Filesystem)
+echo "📂 Estado de Filesystem:"
+df -h
+echo "---------------------------------------"
+
+
+# Búsqueda de archivos con 'find'
+echo "🔍 Ejemplo de búsqueda de archivos .log mayores a 10MB:"
+find /var/log -type f -name "*.log" -size +10M 2>/dev/null
+echo "---------------------------------------"
+
+# Búsqueda de texto con 'grep'
+echo "📝 Archivos que contienen la palabra 'ERROR':"
+grep -r "ERROR" /var/log 2>/dev/null | head -n 5
+echo "---------------------------------------"
+
+# Copia y movimiento de archivos (ejemplo)
+# cp archivo1.txt /tmp/
+# mv archivo1.txt /home/usuario/
+
+# Transferencia remota con SCP (ejemplo)
+# scp archivo1.txt usuario@servidor:/ruta/destino
+
+# Ejecución de scripts (ejemplo)
+# bash script.sh
+
+echo "Script ejecutado con éxito"
