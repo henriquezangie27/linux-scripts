@@ -12,7 +12,7 @@ Servir como referencia para administradores de sistemas y entornos QA.
 
 Sistema Operativo: Linux (Debian/Ubuntu)
 Lenguaje de Scripting: Bash
-Comandos utilizados: uptime, free, df, find, grep, scp, cp, mv
+Comandos utilizados: uptime, free, df, find, grep, scp, cp, mv, sftp, tar,gzip,awk
 
 
 📄 Contenido del Script
@@ -22,6 +22,6 @@ Este script incluye:
 🕒 Tiempo de encendido del sistema (uptime)
 💾 Uso de memoria (free -h)
 📂 Estado del sistema de archivos (df -h)
-🔍 Búsqueda de archivos .log mayores a 10MB (find)
-📝 Búsqueda de texto "ERROR" en archivos de log (grep)
-📤 Ejemplos comentados de copia, movimiento y transferencia remota (cp, mv, scp)
+🔍 Búsqueda de archivos .log mayores a 10MB y mantenimiento (find)
+📝 Búsqueda de texto "ERROR" en archivos de log(grep)
+📤 Ejemplos comentados de copia, movimiento y transferencia remota (cp, mv, scp,sftp,tar,gzip)
